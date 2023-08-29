@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choy</title>
+    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h5 class="offcanvas-title" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">Catalogo</h5>
+            <a class="navbar-brand" href="./carrito.html">
+                <i class="bi bi-cart2"></i>
+            </a>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active col-4" href="./catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./carrito.html" class="nav-link">Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="catalogo">
+        <aside>
+            <div class="contenedor-checkbox">
+                <!-- observar que el atributo for y el id son iguales, vincula el label y el input -->
+                <input class="checkbox-input" id="seccion1" type="checkbox">
+                <label class="box-checkbox text-center" for="seccion1">
+                    <div class="customCheckBox">
+                        <div class="checkbox-txt">seccion1</div>
+                    </div>
+                </label>
+                <input class="checkbox-input" id="seccion2" type="checkbox" >
+                <label class="box-checkbox text-center" for="seccion2">
+                    <div class="customCheckBox">
+                        <div class="checkbox-txt">seccion2</div>
+                    </div>
+                </label>
+                <input class="checkbox-input" id="seccion3" type="checkbox">
+                <label class="box-checkbox text-center" for="seccion3">
+                    <div class="customCheckBox">
+                        <div class="checkbox-txt">seccion3</div>
+                    </div>
+                </label>
+        </aside>
+        <section class="container-fluid" id="contenedorProductos">
+            <!-- <div class="card col-5 col-md-4 col-lg-3 card1" id="recomendado1">
+                <img src="../img/1.jpeg" alt="" class="card-img-top">
+                <h4>lola1</h4>
+                <div class="card-footer">
+                    <button type="button" class="bi-arrow-up-square-fill btn-buy" id="btn-up"></button>
+                    <h2 id="item-text">0</h2>
+                    <button type="button" class="bi-arrow-down-square-fill btn-buy" id="btn-down"></button>
+                </div>
+                <button class="btn-buy">
+                    <svg fill="black" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="card col-5 col-md-4 col-lg-3 card2" id="recomendado2">
+                <img src="../img/1.jpeg" alt="" class="card-img-top">
+                <h4>lola2</h4>
+                <div class="card-footer">
+                    <button type="button" class="bi-arrow-up-square-fill btn-buy" id="btn-up"></button>
+                    <h2 id="item-text">0</h2>
+                    <button type="button" class="bi-arrow-down-square-fill btn-buy" id="btn-down"></button>
+                </div>
+                <button class="btn-buy">
+                    <svg fill="black" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="card col-5 col-md-4 col-lg-3 card3" id="recomendado3">
+                <img src="../img/1.jpeg" alt="" class="card-img-top">
+                <h4>lola3</h4>
+                <div class="card-footer">
+                    <button type="button" class="bi-arrow-up-square-fill btn-buy" id="btn-up"></button>
+                    <h2 id="item-text">0</h2>
+                    <button type="button" class="bi-arrow-down-square-fill btn-buy" id="btn-down"></button>
+                </div>
+                <button class="btn-buy">
+                    <svg fill="black" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                    </svg>
+                </button>
+            </div> -->
+        </section>
+    </main>
+    <footer>
+        <h3>
+            Powered by Mingolla Francisco, Copyright. © 2023 Mingolla Francisco. Todos los derechos reservados.
+        </h3>
+        <div>
+            <a href="https://wa.link/d6gtie" target="_blank">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/franciscomingolla/" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

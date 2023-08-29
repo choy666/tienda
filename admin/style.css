@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+main{ 
+    color: white;
+}
+h1 {
+    font-weight: 900;
+    color: white;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 30px 0px;
+}
+h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 900;
+    font-size: 40px;
+    color: black;
+}
+.idProducto{
+    font-size: 20px;
+    color: red;
+}
+.precioProducto{
+    font-size: 25px;
+    color:#FBCA1F;
+}
+label{
+    color: black;
+    font-weight: 900;
+    letter-spacing: .8px;
+}
+img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 70px;
+    width: 100%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px auto 45px auto;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contenedor div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8cb7fb;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    flex: 1 1 300px;
+}
+
+.contenedor div form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.contenedor div form input,
+select {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: black;
+}
+option{
+    color: black;
+}
+
+button {
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin-top: 20px;
+  }
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 3px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+button:hover .button_top {
+    transform: translateY(-0.33em);
+}
+button:active .button_top {
+    transform: translateY(0);
+}
+.mostrarProductos {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.producto{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color:black;
+    border-radius: 20px;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.informacion p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contenedorMensaje {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    height: 70px;
+}
+
+.contenedorProductos{
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    padding: 30px 0;
+}
+.repetidoError,
+.realizado,
+.llenarCampos,
+.noExisteError {
+    margin: 15px 0px;
+}
+
+.llenarCampos::after,
+.noExisteError::after,
+.repetidoError::after,
+.realizado::after {
+    background-color: red;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.realizado::after {
+    content: 'Realizado';
+    background-color: green;
+}
+
+.repetidoError::after {
+    content: 'Este elemento ya existe';
+}
+
+.llenarCampos::after {
+    content: 'Por favor compruebe que todos los campos estan llenos';
+}
+
+.noExisteError::after {
+    content: 'Este elemento no existe';
+}
+footer{
+    background-color:black;
+    color: #fbcb1f70;
+    margin: 0 25px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer div a{
+    margin: 5px 20px;
+}
+.bi{
+    font-size: 30px;
+    color: #FBCA1F;
+}
+a{
+    text-decoration: none;
+}
